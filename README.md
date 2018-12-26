@@ -42,3 +42,9 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+## 以下为笔记
+### 实现一个通用组件，写代码之前要确定：
+1.确定组件结构、
+2.观察组件逻辑
+3.确定组件内部状态state
+4.确定组件向外暴露的属性（props）

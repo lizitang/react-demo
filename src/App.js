@@ -31,6 +31,7 @@ import UserAdd from './UserAdd';
 import Page2 from './Page2';
 import Page3 from './Page3';
 import Page4 from './Page4';
+import UserList from './UserList'
 
 class App extends Component {
     render() {
@@ -42,6 +43,7 @@ class App extends Component {
                     <Route path="/Page2" component={Page2}></Route>
                     <Route path="/Page3" component={Page3}></Route>
                     <Route path="/user/list" component={Page4}></Route>
+                    <Route path="/user/editList" component={UserList}></Route>
                 </div>
             </Router>
         )

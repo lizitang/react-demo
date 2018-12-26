@@ -19,6 +19,9 @@ class Home extends Component {
                 <Link to="/user/list">
                     <div>ant 用户列表</div>
                 </Link>
+                <Link to="/user/editList">
+                    <div>可编辑删除列表</div>
+                </Link>
             </HomeLayout>
             /*w未使用组件在下面 */
             // <div>
