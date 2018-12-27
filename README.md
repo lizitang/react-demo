@@ -51,7 +51,8 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ### prop-types约束(propTypes已弃用)
 静态类型校验
 ```js
- import PropTypes from 'prop-types;
+ import PropTypes from 'prop-types
+ 
  class Greeting extends React.Component {
      render(){
          return (
