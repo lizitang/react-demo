@@ -48,3 +48,20 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 2.观察组件逻辑
 3.确定组件内部状态state
 4.确定组件向外暴露的属性（props）
+### prop-types约束(propTypes已弃用)
+静态类型校验
+```js
+ import PropTypes from 'prop-types;
+ class Greeting extends React.Component {
+     render(){
+         return (
+            <h1>Hello,{this.props.name}</h1>
+         )
+     }
+ }
+ 
+ Greeting.propTypes = {
+     name: PropTypes.string
+ }
+```
+### contextTypes?? 不懂

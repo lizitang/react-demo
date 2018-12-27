@@ -1,5 +1,7 @@
 import React,{ Component } from 'react'
 import HomeLayout from './layouts/HomeLayout'
+import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 class UserList extends Component{
   constructor(props){
@@ -18,7 +20,7 @@ class UserList extends Component{
       })
   }
   handleEdit (user) {
-
+    this.props.history.push({pathname:'/user/edit/', query:{'id':user.id}});
   }
   handleDel (user) {
     const confirmed = window.confirm(`确定要删除用户 ${user.name} 吗？`);
@@ -37,6 +39,7 @@ class UserList extends Component{
   }
   render(){
     const {data} = this.state;
+    const style = {cursor:'pointer',color:'#40a9ff'};
       return (
         <HomeLayout title="用户列表页">
           <div style={{width:'600px',margin:'30px 30px'}}>
@@ -59,9 +62,10 @@ class UserList extends Component{
                                     <td>{user.age}</td>
                                     <td>{user.gender}</td>
                                     <td>
-                                        <a href="javascript:void(0)" onClick={() => this.handleEdit(user)}>编辑</a>
+                                        <span style={style} onClick={() => this.handleEdit(user)}>
+                                        <Link to={{pathname:'/user/edit/',query:{'id': user.id} }}>编辑</Link></span>
                                         &nbsp;
-                                        <a href="javascript:void(0)" onClick={() => this.handleDel(user)}>删除</a>
+                                        <span style={style} onClick={() => this.handleDel(user)}>删除</span>
                                     </td>
                                 </tr>
                             )
@@ -75,5 +79,8 @@ class UserList extends Component{
   }
 }
 
+UserList.contextTypes = {
+    router:PropTypes.object.isRequired
+}
 export default UserList
  /* <Table columns={columns} dataSource={data} size="middle"/> */

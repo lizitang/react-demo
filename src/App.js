@@ -25,6 +25,7 @@
 //router路由的使用和跳转
 import React,{Component} from 'react'
 import {BrowserRouter as Router,Route} from 'react-router-dom'
+import {Switch} from 'react-router'
 // 从react-router-dom包中导入Router和Route，BrowserRouter是Router中的一种
 import Home from './Home'
 import UserAdd from './UserAdd';
@@ -32,6 +33,7 @@ import Page2 from './Page2';
 import Page3 from './Page3';
 import Page4 from './Page4';
 import UserList from './UserList'
+import UserEdit from './UserEdit'
 
 class App extends Component {
     render() {
@@ -43,7 +45,8 @@ class App extends Component {
                     <Route path="/Page2" component={Page2}></Route>
                     <Route path="/Page3" component={Page3}></Route>
                     <Route path="/user/list" component={Page4}></Route>
-                    <Route path="/user/editList" component={UserList}></Route>
+                    <Route path="/user/userList" component={UserList}></Route>
+                    <Route path="/user/edit" component={UserEdit}></Route>
                 </div>
             </Router>
         )
