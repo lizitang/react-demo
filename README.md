@@ -50,7 +50,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 4.确定组件向外暴露的属性（props）
 ### prop-types约束(propTypes已弃用)
 静态类型校验
-```js
+```jsx
  import PropTypes from 'prop-types
  
  class Greeting extends React.Component {
